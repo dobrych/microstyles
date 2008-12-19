@@ -1,0 +1,91 @@
+/* general HTML customization */
+html, body {
+	margin: 0px;
+	padding: 0px;
+	color: #000;
+	font-family: Helvetica, Arial, Geneva, sans-serif;
+}
+html {
+	width: 100%;
+	height: 100%;
+	background: url(http://k10k.net/_img/pixelpatterns/tiles/pat_20070425224241.gif) repeat fixed;
+}
+
+blockquote {
+	font-style: italic;
+}
+
+a {
+	color: #5C0009;
+}
+a:hover {
+	color: #940315;
+}
+
+/* pure hAtom styling */
+div.hfeed {
+	width: 40em;
+	margin: 0em auto;
+}
+
+.hentry {
+	background: #ddd;
+	padding: 1em;
+	margin-bottom: 1em;
+	border: 3px solid #9B96A3;
+	border-radius: 9px;
+/* feel free to enable corner radius for better look, makes CSS not valid */
+/*  -moz-border-radius: 9px;*/
+/*  -webkit-border-radius: 9px;*/
+}
+
+.hentry .entry-title {
+	margin-top: 0em;
+	margin-bottom: 0.5em;
+	padding-left: 25px; /* for post type icon in background */
+	font-size: 130%;
+}
+
+abbr.published {
+	
+}
+
+address, address a {
+	display: inline;
+}
+
+/* mixed hAtom + content customization
+   may be used for image or headings styling in hAtom feed content */
+
+.links .entry-content a {
+	font-size: 110%;
+	font-weight: bold;
+	display: block;
+}
+.quote .entry-content blockquote {
+	border-left: 0.25em solid #393845;
+	padding-left: 0.5em;
+	margin-left: 3em;
+}
+.picture .entry-content img {
+	display: block;
+	margin: 0em auto;
+	padding: 1px;
+	background: #ddd;
+	border: 15px solid #393845;
+}
+.picture .entry-content p {
+	width: 85%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* non-hAtom additional styling */
+h1#main-title {
+	text-align: center;
+	color: #fff;
+}
+h1#main-title a {
+	color: #fff;
+	text-decoration: none;
+}
