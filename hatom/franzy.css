@@ -1,0 +1,49 @@
+/* general HTML customization */
+html, body {margin: 0px; padding: 0px;}
+body {
+	color: #000;
+	background: #FFF0A5 url(http://www.k10k.net/_img/pixelpatterns/tiles/pat_20030430205535.gif) repeat;
+	font-family: Helvetica, Arial, Geneva, sans-serif;
+	padding: 0 20%;
+}
+p {}
+blockquote {}
+a { color: #8F2800; }
+a:hover { color: #B54926; }
+a:visited { color: #666; }
+
+/* pure hAtom styling */
+.hfeed {
+    background: #FFF0A5;
+    border: 5px solid #FFB03B;
+    border-top: none; border-bottom: none;
+    padding: 0 20px;
+    padding-top: 20px;
+} /* main feed items container */
+.hentry {
+    margin-top: 25px;
+    padding: 10px;
+    border-bottom: 3px solid #FFB03B;
+} /* feed item aka post */
+
+.hentry .entry-summary, .hentry .entry-content {} /* post text */
+.hentry .entry-title { font-size: 130%; } /* post title */
+abbr.published, abbr.updated {} /* post date */
+address {display: inline;} /* post author in hCard format*/
+
+/* mixed hAtom + content customization
+   may be used for image or headings styling in hAtom feed content */
+.hentry .post-meta {}
+.entry-content a {}
+.entry-content blockquote {}
+.entry-content img { border: 3px solid #FFCF87;}
+.entry-content p {}
+
+/* non-hAtom additional styling */
+h1#main-title {
+	text-align: center;
+	margin: 0px;
+}
+h1#main-title a {
+	text-decoration: none;
+}
