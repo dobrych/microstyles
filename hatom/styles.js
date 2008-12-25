@@ -5,6 +5,7 @@ $(document).ready(function() {
     // add your styleshit here
     $('#style_selector').append($('<strong>switch styles:</strong>'));
     $('#style_selector').append($('<a>monoskin</a>').attr('href','monoskin.css'));
+    $('#style_selector').append($('<a>cold ice</a>').attr('href','cold-ice.css'));
     $('#style_selector').append($('<a>franzy</a>').attr('href','franzy.css'));
     // end of stilesheet list
     $('#style_selector a').css('padding', '2px');

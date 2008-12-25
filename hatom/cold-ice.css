@@ -1,0 +1,39 @@
+/* general HTML customization */
+html, body {margin: 0px; padding: 0px;}
+body {
+    color: #222;
+    background: #2E466B;
+    padding: 25%;
+    padding-top: 0px;
+}
+p {}
+blockquote {font-style: italic;}
+a { color: #0066FF; }
+a:hover { color: #0043A9; }
+a:visited { color: #3385FF; }
+
+/* pure hAtom styling */
+.hfeed {} /* main feed items container */
+.hentry {
+    background: #B3C7E6;
+    border: 5px solid #668FCC;
+    padding: 10px;
+    margin-bottom: 25px;
+} /* feed item aka post */
+.hentry .entry-summary, .hentry .entry-content {} /* post text */
+.hentry .entry-title, .hentry .entry-title a {font-size: 125%; color: #0052CC; font-weight: normal;} /* post title */
+.hentry .entry-title a { text-transform: uppercase; font-family: Georgia, serif; }
+abbr.published, abbr.updated {} /* post date */
+address {display: inline;} /* post author in hCard format*/
+
+/* mixed hAtom + content customization
+   may be used for image or headings styling in hAtom feed content */
+.hentry .post-meta, .hentry .tags { color: #333; }
+.entry-content a {}
+.entry-content blockquote {}
+.entry-content img a { border: 3px solid #999; }
+.entry-content p {}
+
+/* non-hAtom additional styling */
+h1#main-title {text-align: right;}
+h1#main-title a { text-decoration: none; text-transform: uppercase; font-family: Georgia, serif;}

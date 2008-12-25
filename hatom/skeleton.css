@@ -10,18 +10,19 @@ a:visited {}
 /* pure hAtom styling */
 .hfeed {} /* main feed items container */
 .hentry {} /* feed item aka post */
-.hentry .entry-summary, .hentry .entry-content {} /* post text */
+.hentry .entry-summary, .hentry .entry-content {} /* post text, place for additional typography */
 .hentry .entry-title {} /* post title */
 abbr.published, abbr.updated {} /* post date */
 address {} /* post author in hCard format*/
 
 /* mixed hAtom + content customization
    may be used for image or headings styling in hAtom feed content */
+.hentry .tags {}
 .hentry .post-meta {}
 .entry-content a {}
 .entry-content blockquote {}
 .entry-content img {}
-.entry-content p {}
+.entry-content p {} /* place for additional typography */
 
 /* non-hAtom additional styling */
-h1#site-title {}
+h1#main-title {}
