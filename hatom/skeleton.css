@@ -26,3 +26,8 @@ address {} /* post author in hCard format*/
 
 /* non-hAtom additional styling */
 h1#main-title {}
+
+/* additional ala blog layout styling */
+#header {}
+#sidebar {}
+#footer {}
