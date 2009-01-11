@@ -29,5 +29,5 @@ h1#main-title {}
 
 /* additional ala blog layout styling */
 #header {}
-#sidebar {}
 #footer {}
+.metablock {} /* something like sidebar, but more generic, depending on layout */

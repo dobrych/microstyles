@@ -89,3 +89,13 @@ h1#main-title a {
 	color: #fff;
 	text-decoration: none;
 }
+
+.metablock, #footer {
+	background: #ddd;
+	padding: 2%;
+	margin-bottom: 1em;
+	border-top: 3px solid #9B96A3;
+	width: 21%;
+	float: left;
+	font-size: 90%;
+}

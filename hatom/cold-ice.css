@@ -37,3 +37,10 @@ address {display: inline;} /* post author in hCard format*/
 /* non-hAtom additional styling */
 h1#main-title {text-align: right;}
 h1#main-title a { text-decoration: none; text-transform: uppercase; font-family: Georgia, serif;}
+
+.metablock, #footer {
+    background: #B3C7E6;
+    border: 3px solid #668FCC;
+    padding: 10px;
+    margin-bottom: 15px;
+}
