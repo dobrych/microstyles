@@ -1,0 +1,72 @@
+/* inspired by sushi color scheme http://kuler.adobe.com/#themeID/350205 */
+/* general HTML customization */
+html, body {margin: 0px; padding: 0px;}
+body {
+    background: #3E373F;
+    color: #CDD452;
+    padding: 0% 18%;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.2em;
+}
+p {margin-top: 0.25em; margin-bottom: 0.75em;}
+blockquote {}
+a {color: #CDD452;}
+a:visited {color: #FEE169;}
+a:hover {color: #F9722E;}
+
+/* pure hAtom styling */
+.hfeed {
+    padding: 0px 40px;
+    border-left: 5px solid #1E171F;
+    border-right: 5px solid #1E171F;
+    border-top: 1px solid #261F27;
+    background: #261F27;
+} /* main feed items container */
+.hentry {} /* feed item aka post */
+.hentry .entry-summary, .hentry .entry-content {} /* post text, place for additional typography */
+.hentry .entry-title {
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: bold;
+    text-transform: normal;
+    letter-spacing: -1px;
+    line-height: 1.1em;
+    margin-bottom: 3px;
+    margin-top: 20px;
+} /* post title */
+.hentry .entry-title a {text-decoration: none; text-transform: uppercase;}
+
+abbr.published, abbr.updated {} /* post date */
+address {display: inline;} /* post author in hCard format*/
+
+/* mixed hAtom + content customization
+   may be used for image or headings styling in hAtom feed content */
+.hentry .tags {}
+.hentry .post-meta { border-bottom: 3px dotted #C9313D; padding-bottom: 10px; margin-bottom: 2em;}
+.entry-content a {}
+.entry-content blockquote {}
+.entry-content img {}
+.entry-content p {} /* place for additional typography */
+
+/* non-hAtom additional styling */
+h1#main-title {
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: bold;
+    text-transform: normal;
+    letter-spacing: -1px;
+    line-height: 1.1em;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 0.5em;
+    background: #C9313D;
+}
+h1#main-title a {text-decoration: none; background: #261F27; border: 7px solid #261F27; color: #C9313D; padding: 0px 10px;}
+
+/* additional ala blog layout styling */
+#header {}
+#footer {}
+.metablock {} /* something like sidebar, but more generic, depending on layout */
