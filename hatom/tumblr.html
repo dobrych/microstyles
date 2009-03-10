@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="shortcut icon" href="{Favicon}">
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+    <link rel="stylesheet" href="http://media.carefulweb.com/microstyles/hatom/cold-ice.css" type="text/css" media="screen" charset="utf-8">
+    <script type="text/javascript" charset="utf-8" src="http://code.jquery.com/jquery-1.3.2.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="http://media.carefulweb.com/microstyles/hatom/styles.js"></script>
+    <title>{block:PostTitle}{PostTitle} — {/block:PostTitle}{Title}</title>
+</head>
+
+<body>
+
+    <h1 id="main-title">{Title}</h1>
+
+    <div id="message-box">
+        {block:SearchPage}
+        <strong>Searching for: "{SearchQuery}"</strong> ({SearchResultCount} found)
+        {/block:SearchPage}
+        {block:NoSearchResults}<strong>No results for "{SearchQuery}"</strong>{/block:NoSearchResults}
+        {block:TagPage}
+            <strong>Posts tagged "{Tag}"</strong>
+        {/block:TagPage}
+    </div>
+    <div class="hfeed" id="content">
+        {block:Posts}
+            {block:Text}
+                <div class="hentry text" id="post-{PostID}">
+                    {block:Title}<h2 class="entry-title"><a href="{Permalink}" rel="bookmark" title="">{Title}</a></h2>{/block:Title}
+                    <div class="entry-content">
+                        {Body}
+                    </div>
+                    {block:HasTags}
+                    <div class="tags"><strong>Tags:</strong>{block:Tags} <a href="{TagURL}" rel="tag">{Tag}</a>{/block:Tags}</div>
+                    {/block:HasTags}
+                    <div class="post-meta">
+                        <strong>Posted</strong> <a href="{Permalink}" rel="bookmark" title=""><abbr class="published" title="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}">{TimeAgo}</abbr></a>
+                    </div>
+                </div>
+            {/block:Text}
+
+            {block:Photo}
+                <div class="hentry photo" id="post-{PostID}">
+                    {LinkOpenTag}<img src="{PhotoURL-400}" alt="{PhotoAlt}"/>{LinkCloseTag}
+
+                    {block:Caption}
+                        <div class="entry-content caption">{Caption}</div>
+                    {/block:Caption}
+                    {block:HasTags}
+                    <div class="tags"><strong>Tags:</strong>{block:Tags} <a href="{TagURL}" rel="tag">{Tag}</a>{/block:Tags}</div>
+                    {/block:HasTags}
+                    <div class="post-meta">
+                        <strong>Posted</strong> <a href="{Permalink}" rel="bookmark" title=""><abbr class="published" title="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}">{TimeAgo}</abbr></a>
+                    </div>
+                </div>
+            {/block:Photo}
+
+            {block:Quote}
+                <div class="hentry quote" id="post-{PostID}">
+                    <div class="entry-content">
+                    <blockquote>{Quote}</blockquote>
+
+                    {block:Source}
+                        <div class="source">{Source}</div>
+                    {/block:Source}
+                    </div>
+                    {block:HasTags}
+                    <div class="tags"><strong>Tags:</strong>{block:Tags} <a href="{TagURL}" rel="tag">{Tag}</a>{/block:Tags}</div>
+                    {/block:HasTags}
+                    <div class="post-meta">
+                        <strong>Posted</strong> <a href="{Permalink}" rel="bookmark" title=""><abbr class="published" title="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}">{TimeAgo}</abbr></a>
+                    </div>
+                </div>
+            {/block:Quote}
+
+            {block:Link}
+                <div class="hentry link" id="post-{PostID}">
+                    <div class="entry-content">
+                    <a href="{URL}" class="link" {Target}>{Name}</a>
+
+                    {block:Description}
+                        <div class="description">{Description}</div>
+                    {/block:Description}
+                    </div>
+                    {block:HasTags}
+                    <div class="tags"><strong>Tags:</strong>{block:Tags} <a href="{TagURL}" rel="tag">{Tag}</a>{/block:Tags}</div>
+                    {/block:HasTags}
+                    <div class="post-meta">
+                        <strong>Posted</strong> <a href="{Permalink}" rel="bookmark" title=""><abbr class="published" title="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}">{TimeAgo}</abbr></a>
+                    </div>
+                </div>
+            {/block:Link}
+
+            {block:Chat}
+                <div class="hentry chat" id="post-{PostID}">
+                    {block:Title}<h2 class="entry-title"><a href="{Permalink}" rel="bookmark" title="">{Title}</a></h2>{/block:Title}
+
+                    <div class="entry-content">
+                    <dl id="chat-{PostID}">
+                        {block:Lines}
+                            <dt class="{Alt} user_{UserNumber}">{block:Label}{Label}{/block:Label}</dt>
+                            <dd>{Line}</dd>
+                        {/block:Lines}
+                    </dl>
+                    </div>
+                    {block:HasTags}
+                    <div class="tags"><strong>Tags:</strong>{block:Tags} <a href="{TagURL}" rel="tag">{Tag}</a>{/block:Tags}</div>
+                    {/block:HasTags}
+                    <div class="post-meta">
+                        <strong>Posted</strong> <a href="{Permalink}" rel="bookmark" title=""><abbr class="published" title="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}">{TimeAgo}</abbr></a>
+                    </div>
+                </div>
+            {/block:Chat}
+
+            {block:Video}
+                <div class="hentry video" id="post-{PostID}">
+                    <div class="entry-content">
+                    {Video-400}
+
+                    {block:Caption}
+                    <div class="caption">{Caption}</div>
+                    {/block:Caption}
+                    </div>
+                    {block:HasTags}
+                    <div class="tags"><strong>Tags:</strong>{block:Tags} <a href="{TagURL}" rel="tag">{Tag}</a>{/block:Tags}</div>
+                    {/block:HasTags}
+                    <div class="post-meta">
+                        <strong>Posted</strong> <a href="{Permalink}" rel="bookmark" title=""><abbr class="published" title="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}">{TimeAgo}</abbr></a>
+                    </div>
+                </div>
+            {/block:Video}
+        {/block:Posts}
+</div>
+{block:Pagination} 
+<div id="pagination">
+{block:PreviousPage}<a href="{PreviousPage}">&#171; Previous</a>{/block:PreviousPage}
+<strong>[{CurrentPage} of {TotalPages}]</strong>
+{block:NextPage}<a href="{NextPage}">Next &#187;</a>{/block:NextPage}
+</div>
+{/block:Pagination}
+
+{block:PostNotes}
+<div id="notes-list">
+    <h3>{NoteCountWithLabel}</h3>
+    {PostNotes}
+</div>
+{/block:PostNotes}
+
+{block:Description}
+<div class="metablock" id="description">
+    <h3>About</h3>
+    <p>{Description}</p>
+</div>
+{/block:Description}
+
+<div class="metablock" id="navigation">
+    <a href="/archive">Archive</a>
+    <a href="/mobile">Mobile</a>
+    <a href="{RSS}">RSS</a>
+</div>
+
+<div class="metablock" id="search">
+    <h3>Search</h3>
+    <p>
+        <form action="/search" method="get">
+            <input type="text" name="q" value="{SearchQuery}"/>
+            <input type="submit" value="Search"/>
+        </form>
+    </p>
+</div>
+
+</body>
+</html>
