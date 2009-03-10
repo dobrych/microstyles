@@ -8,13 +8,14 @@ $(document).ready(function() {
         'line-height': '1.5em', 'text-transform': 'uppercase', float: 'left',
         height: '14px'
     });
-    //$('#style_selector').hide();
+    // calculate styles location
+    var style_base = $('link[rel="stylesheet"]').attr('href').replace(new RegExp("[0-9a-zA-Z_\-]+\.css"), '');
     // add your styleshit here
     $('#style_selector').append($('<strong id="microstyle_list">switch styles:</strong>'));
-    $('#style_selector').append($('<a href="monoskin.css">monoskin</a>'));
-    $('#style_selector').append($('<a href="cold-ice.css">cold ice</a>'));
-    $('#style_selector').append($('<a href="franzy.css">franzy</a>'));
-    $('#style_selector').append($('<a href="sushi.css">sushi</a>'));
+        $('#style_selector').append($('<a>monoskin</a>').attr('href', style_base + 'monoskin.css'));
+        $('#style_selector').append($('<a>cold ice</a>').attr('href', style_base + 'cold-ice.css'));
+        $('#style_selector').append($('<a>franzy</a>').attr('href', style_base + 'franzy.css'));
+        $('#style_selector').append($('<a>sushi</a>').attr('href', style_base + 'sushi.css'));
     // end of stilesheets list
     $('#style_selector a').css({padding: '2px', color: '#222'});
     $('#style_selector a').click(function(){
