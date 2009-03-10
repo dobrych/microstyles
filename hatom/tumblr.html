@@ -14,18 +14,19 @@
 
 <body>
 
-    <h1 id="main-title">{Title}</h1>
-
-    <div id="message-box">
-        {block:SearchPage}
-        <strong>Searching for: "{SearchQuery}"</strong> ({SearchResultCount} found)
-        {/block:SearchPage}
-        {block:NoSearchResults}<strong>No results for "{SearchQuery}"</strong>{/block:NoSearchResults}
-        {block:TagPage}
-            <strong>Posts tagged "{Tag}"</strong>
-        {/block:TagPage}
-    </div>
     <div class="hfeed" id="content">
+        <h1 id="main-title">{Title}</h1>
+
+        <div id="message-box">
+            {block:SearchPage}
+            <strong>Searching for: "{SearchQuery}"</strong> ({SearchResultCount} found)
+            {/block:SearchPage}
+            {block:NoSearchResults}<strong>No results for "{SearchQuery}"</strong>{/block:NoSearchResults}
+            {block:TagPage}
+                <strong>Posts tagged "{Tag}"</strong>
+            {/block:TagPage}
+        </div>
+
         {block:Posts}
             {block:Text}
                 <div class="hentry text" id="post-{PostID}">
