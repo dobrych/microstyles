@@ -52,6 +52,7 @@ $(document).ready(function() {
     Microstyles.add_stylesheet('franzy', 'franzy.css');
     Microstyles.add_stylesheet('sushi', 'sushi.css');
     Microstyles.add_stylesheet('progmatic', 'progmatic.css');
+    Microstyles.add_stylesheet('photomatic-dark', 'photomatic-dark.css');
     // end of stylesheets list
     // setup button control for styles box
     Microstyles.setup_button();
