@@ -28,51 +28,27 @@
         </div>
 
         {block:Posts}
+        <div class="hentry{block:Text} text{/block:Text}{block:Photo} photo{/block:Photo}{block:Quote} quote{/block:Quote}{block:Link} link{/block:Link}{block:Chat} chat{/block:Chat}{block:Video} video{/block:Video}{block:Audio} audio{/block:Audio}" id="post-{PostID}">
             {block:Text}
-                <div class="hentry text" id="post-{PostID}">
                     {block:Title}<h2 class="entry-title"><a href="{Permalink}" rel="bookmark" title="">{Title}</a></h2>{/block:Title}
                     <div class="entry-content">
                     {Body}
                     </div>
-                    {block:HasTags}
-                    <div class="tags"><strong>Tags:</strong>{block:Tags} <a href="{TagURL}" rel="tag">{Tag}</a>{/block:Tags}</div>
-                    {/block:HasTags}
-                    <div class="post-meta">
-                        <strong>Posted</strong> <a href="{Permalink}" rel="bookmark" title=""><abbr class="published" title="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}">{TimeAgo}</abbr></a>
-                    </div>
-                </div>
             {/block:Text}
 
             {block:Photo}
-                <div class="hentry photo" id="post-{PostID}">
                     {block:Caption}<div class="entry-title caption">{Caption}</div>{/block:Caption}
 
                     <div class="entry-content">{LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}"/>{LinkCloseTag}</div>
-                    {block:HasTags}
-                    <div class="tags"><strong>Tags:</strong>{block:Tags} <a href="{TagURL}" rel="tag">{Tag}</a>{/block:Tags}</div>
-                    {/block:HasTags}
-                    <div class="post-meta">
-                        <strong>Posted</strong> <a href="{Permalink}" rel="bookmark" title=""><abbr class="published" title="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}">{TimeAgo}</abbr></a>
-                    </div>
-                </div>
             {/block:Photo}
 
             {block:Quote}
-                <div class="hentry quote" id="post-{PostID}">
                     {block:Source}<div class="entry-title source">{Source}</div>{/block:Source}
 
                     <div class="entry-content"><blockquote>{Quote}</blockquote></div>
-                    {block:HasTags}
-                    <div class="tags"><strong>Tags:</strong>{block:Tags} <a href="{TagURL}" rel="tag">{Tag}</a>{/block:Tags}</div>
-                    {/block:HasTags}
-                    <div class="post-meta">
-                        <strong>Posted</strong> <a href="{Permalink}" rel="bookmark" title=""><abbr class="published" title="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}">{TimeAgo}</abbr></a>
-                    </div>
-                </div>
             {/block:Quote}
 
             {block:Link}
-                <div class="hentry link" id="post-{PostID}">
                     <h2 class="entry-title">
                     <a href="{URL}" class="link" {Target}>{Name}</a>
                     </h2>
@@ -80,17 +56,9 @@
                     {block:Description}
                     <div class="entry-content description">{Description}</div>
                     {/block:Description}
-                    {block:HasTags}
-                    <div class="tags"><strong>Tags:</strong>{block:Tags} <a href="{TagURL}" rel="tag">{Tag}</a>{/block:Tags}</div>
-                    {/block:HasTags}
-                    <div class="post-meta">
-                        <strong>Posted</strong> <a href="{Permalink}" rel="bookmark" title=""><abbr class="published" title="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}">{TimeAgo}</abbr></a>
-                    </div>
-                </div>
             {/block:Link}
 
             {block:Chat}
-                <div class="hentry chat" id="post-{PostID}">
                     {block:Title}<h2 class="entry-title"><a href="{Permalink}" rel="bookmark" title="">{Title}</a></h2>{/block:Title}
 
                     <div class="entry-content">
@@ -101,31 +69,15 @@
                         {/block:Lines}
                     </dl>
                     </div>
-                    {block:HasTags}
-                    <div class="tags"><strong>Tags:</strong>{block:Tags} <a href="{TagURL}" rel="tag">{Tag}</a>{/block:Tags}</div>
-                    {/block:HasTags}
-                    <div class="post-meta">
-                        <strong>Posted</strong> <a href="{Permalink}" rel="bookmark" title=""><abbr class="published" title="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}">{TimeAgo}</abbr></a>
-                    </div>
-                </div>
             {/block:Chat}
 
             {block:Video}
-                <div class="hentry video" id="post-{PostID}">
                     {block:Caption}<div class="entry-title caption">{Caption}</div>{/block:Caption}
 
                     <div class="entry-content">{Video-500}</div>
-                    {block:HasTags}
-                    <div class="tags"><strong>Tags:</strong>{block:Tags} <a href="{TagURL}" rel="tag">{Tag}</a>{/block:Tags}</div>
-                    {/block:HasTags}
-                    <div class="post-meta">
-                        <strong>Posted</strong> <a href="{Permalink}" rel="bookmark" title=""><abbr class="published" title="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}">{TimeAgo}</abbr></a>
-                    </div>
-                </div>
             {/block:Video}
             
             {block:Audio}
-                <div class="hentry audio" id="post-{PostID}">
                     {block:Caption}<div class="entry-title caption">{Caption}</div>{/block:Caption}
 
                     <div class="entry-content">
@@ -133,14 +85,14 @@
                     <p><strong>Played: {FormattedPlayCount}</strong></p>
                     {block:ExternalAudio}<p><a href="{ExternalAudioURL}">Download</a></p>{/block:ExternalAudio}
                     </div>
-                    {block:HasTags}
-                    <div class="tags"><strong>Tags:</strong>{block:Tags} <a href="{TagURL}" rel="tag">{Tag}</a>{/block:Tags}</div>
-                    {/block:HasTags}
-                    <div class="post-meta">
-                        <strong>Posted</strong> <a href="{Permalink}" rel="bookmark" title=""><abbr class="published" title="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}">{TimeAgo}</abbr></a>
-                    </div>
-                </div>
             {/block:Audio}
+                {block:HasTags}
+                <div class="tags"><strong>Tags:</strong>{block:Tags} <a href="{TagURL}" rel="tag">{Tag}</a>{/block:Tags}</div>
+                {/block:HasTags}
+                <div class="post-meta">
+                    <strong>Posted</strong> <a href="{Permalink}" rel="bookmark" title=""><abbr class="published" title="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}">{TimeAgo}</abbr></a>
+                </div>
+            </div>
         {/block:Posts}
 
 {block:Pagination} 
