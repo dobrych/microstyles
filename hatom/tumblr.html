@@ -45,11 +45,9 @@
 
             {block:Photo}
                 <div class="hentry photo" id="post-{PostID}">
-                    {LinkOpenTag}<div class="entry-title"><img src="{PhotoURL-500}" alt="{PhotoAlt}"/></div>{LinkCloseTag}
+                    {block:Caption}<div class="entry-title caption">{Caption}</div>{/block:Caption}
 
-                    {block:Caption}
-                    <div class="entry-content caption">{Caption}</div>
-                    {/block:Caption}
+                    <div class="entry-content">{LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}"/>{LinkCloseTag}</div>
                     {block:HasTags}
                     <div class="tags"><strong>Tags:</strong>{block:Tags} <a href="{TagURL}" rel="tag">{Tag}</a>{/block:Tags}</div>
                     {/block:HasTags}
@@ -61,13 +59,9 @@
 
             {block:Quote}
                 <div class="hentry quote" id="post-{PostID}">
-                    <div class="entry-title">
-                    <blockquote>{Quote}</blockquote>
-                    </div>
+                    {block:Source}<div class="entry-title source">{Source}</div>{/block:Source}
 
-                    {block:Source}
-                    <div class="entry-content source">{Source}</div>
-                    {/block:Source}
+                    <div class="entry-content"><blockquote>{Quote}</blockquote></div>
                     {block:HasTags}
                     <div class="tags"><strong>Tags:</strong>{block:Tags} <a href="{TagURL}" rel="tag">{Tag}</a>{/block:Tags}</div>
                     {/block:HasTags}
@@ -118,13 +112,9 @@
 
             {block:Video}
                 <div class="hentry video" id="post-{PostID}">
-                    <div class="entry-title">
-                    {Video-500}
-                    </div>
+                    {block:Caption}<div class="entry-title caption">{Caption}</div>{/block:Caption}
 
-                    {block:Caption}
-                    <div class="entry-content caption">{Caption}</div>
-                    {/block:Caption}
+                    <div class="entry-content">{Video-500}</div>
                     {block:HasTags}
                     <div class="tags"><strong>Tags:</strong>{block:Tags} <a href="{TagURL}" rel="tag">{Tag}</a>{/block:Tags}</div>
                     {/block:HasTags}
@@ -136,12 +126,10 @@
             
             {block:Audio}
                 <div class="hentry audio" id="post-{PostID}">
-                    <div class="entry-title">
-                    {AudioPlayerGrey}
-                    </div>
+                    {block:Caption}<div class="entry-title caption">{Caption}</div>{/block:Caption}
 
-                    <div class="entry-content caption">
-                    {block:Caption}{Caption}{/block:Caption}
+                    <div class="entry-content">
+                    {AudioPlayerGrey}
                     <p><strong>Played: {FormattedPlayCount}</strong></p>
                     {block:ExternalAudio}<p><a href="{ExternalAudioURL}">Download</a></p>{/block:ExternalAudio}
                     </div>
