@@ -81,8 +81,10 @@ address {display: inline;} /* post author in hCard format*/
 .entry-content p {} /* place for additional typography */
 
 /* non-hAtom additional styling */
+h1#main-title, #footer, #metabar { width: 560px; margin: 0px auto; }
 h1#main-title {
     margin-bottom: 0px;
+    margin-top: 10px;
     font-size: 36px;
     font-family: Georgia, serif;
     text-transform: uppercase;
@@ -91,9 +93,8 @@ h1#main-title {
 h1#main-title a { text-decoration: none; color: #5C0009;}
 
 /* additional ala blog layout styling */
-#header {}
 
-.metablock, #footer {
+.metablock {
     background: #262622;
     color: #D9D6A9;
     border: 3px solid #2E2E2A;

@@ -13,12 +13,11 @@ a:hover { color: #B54926; }
 a:visited { color: #666; }
 
 /* pure hAtom styling */
-.hfeed {
+.hfeed, #footer, #metabar, h1#main-title {
     background: #FFF0A5;
     border: 5px solid #FFB03B;
     border-top: none; border-bottom: none;
-    padding: 0 20px;
-    padding-top: 20px;
+    padding: 20px;
 } /* main feed items container */
 .hentry {
     margin-top: 25px;
