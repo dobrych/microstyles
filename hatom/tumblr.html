@@ -1,9 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link rel="shortcut icon" href="{Favicon}">
     <link rel="alternate" type="application/rss+xml" href="{RSS}">
     <link rel="stylesheet" href="http://media.carefulweb.com/microstyles/hatom/photomatic-dark.css" type="text/css" media="screen" charset="utf-8">
@@ -36,7 +36,7 @@
             {block:Photo}
                     {block:Caption}<div class="entry-title caption">{Caption}</div>{/block:Caption}
 
-                    <div class="entry-content">{LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}"/>{LinkCloseTag}</div>
+                    <div class="entry-content">{LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}">{LinkCloseTag}</div>
             {/block:Photo}
 
             {block:Quote}
@@ -88,7 +88,7 @@
                 {/block:HasTags}
                 <div class="post-meta">
                     <strong>Posted</strong> <a href="{Permalink}" rel="bookmark" title="{TimeAgo}"><abbr class="published" title="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}">{TimeAgo}</abbr></a>
-                    {block:RebloggedFrom}<strong>Reblogged from:</strong> <a href="{ReblogParentURL}" title="{ReblogParentTitle}"><img src="{ReblogParentPortraitURL-24}" alt="{ReblogParentName}"/></a> <a href="{ReblogParentURL}" title="{ReblogParentTitle}">{ReblogParentName}</a>{/block:RebloggedFrom}
+                    {block:RebloggedFrom}<strong>Reblogged from:</strong> <a href="{ReblogParentURL}" title="{ReblogParentTitle}"><img src="{ReblogParentPortraitURL-24}" alt="{ReblogParentName}"></a> <a href="{ReblogParentURL}" title="{ReblogParentTitle}">{ReblogParentName}</a>{/block:RebloggedFrom}
                 </div>
             </div>
         {/block:Posts}
@@ -126,15 +126,15 @@
 <div class="metablock" id="search">
     <h3>Search</h3>
         <form action="/search" method="get">
-            <input type="text" name="q" value="{SearchQuery}"/>
-            <input type="submit" value="Search"/>
+            <input type="text" name="q" value="{SearchQuery}">
+            <input type="submit" value="Search">
         </form>
 </div>
 
 <div id="footer" class="metablock">
-    <strong xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dc:title" rel="dc:type">Microstyles</strong>
-    by <a xmlns:cc="http://creativecommons.org/ns#" href="http://carefulweb.com" property="cc:attributionName" rel="cc:attributionURL">Ilya Khamushkin</a>
-    is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons Attribution-Share Alike 3.0 License" src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png" /></a>
+    <strong>Microstyles</strong>
+    by <a href="http://carefulweb.com" rel="cc:attributionURL">Ilya Khamushkin</a>
+    is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons Attribution-Share Alike 3.0 License" src="http://i.creativecommons.org/l/by-sa/3.0/80x15.png"></a>
 </div>
 
 </div>
